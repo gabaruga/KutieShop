@@ -1,0 +1,27 @@
+.shopitem {
+    width: 180px;
+    height: 100%;
+    margin: 15px;
+}
+
+.shopitem:hover {
+    box-shadow: 0px 5px 30px -3px #ccc;
+}
+
+.qinput {
+    width: 40px;
+}
+
+.orderform {
+    display: flex;
+    margin: 2px;
+    padding: 2px;
+}
+
+.orderpanel {
+    padding: 2px;
+}
+
+.buybutton {
+    margin-left: 5px;
+}
