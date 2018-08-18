@@ -10,6 +10,10 @@ class ShopItem extends Component {
         this.state = {quantity: 1};
     }
 
+    handleChange = () => {
+        
+    }
+
     doIncrement = () => {
         this.setState({quantity: this.state.quantity+1});
     }
@@ -21,6 +25,8 @@ class ShopItem extends Component {
 
     doBuy = () => {
         this.props.dispatch({type: "UPDATE_CHECK", value: this.state.quantity});
+        console.info("Add checkout dispatch with: "+this.props.title);
+        this.props.dispatch({type: "ADD_CHECKOUT", value: this.props.title});
     }
 
     render () {

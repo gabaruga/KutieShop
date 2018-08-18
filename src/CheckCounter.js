@@ -15,4 +15,3 @@ class CheckCounter extends Component {
 }
 
 export default connect(mapStateToProps)(CheckCounter);
-//export default CheckCounter;

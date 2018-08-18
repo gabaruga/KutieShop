@@ -6,20 +6,29 @@ import ShopItem from './ShopItem'
 import registerServiceWorker from './registerServiceWorker';
 import NavMenu from './NavMenu';
 import Reel from './Reel';
+import CheckOut from './CheckOut';
 import {
     BrowserRouter as Router,
     Route
   } from 'react-router-dom'
 import { createStore } from 'redux';
 
-const init = { count: 0}
+const init = {  count: 0,
+                items_check: [],
+            }
 
 function reducer(state=init, action) {
-    if (action.type === "UPDATE_CHECK") {
-        return {count: state.count+action.value}
-    } 
-
-    return state;
+    switch (action.type) {
+        case "UPDATE_CHECK":
+            return {...state,
+                    count: state.count+action.value};
+        case "ADD_CHECKOUT":
+            console.info(state);
+            return {...state,
+                items_check: [...state.items_check, action.value]};
+        default:
+            return state;
+    }
 }
 
 const store = createStore(reducer);
@@ -28,8 +37,6 @@ const ShopPies = () => (<div className="shopwrap">
 <ShopItem title="Вікашкині булочки" body="Гарни пишни" />
 <ShopItem title="Тошидло-повидло" body="Смачни сладки" />
 </div>);
-
-const CheckOut = () => (<div>This is a checkout</div>)
 
 var ReactRouter = require('react-router');
 var hashHistory = ReactRouter.hashHistory;
