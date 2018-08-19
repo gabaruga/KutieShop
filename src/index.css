@@ -7,3 +7,7 @@ body {
 .shopwrap {
   display: flex;
 }
+
+.greeting {
+  margin-left: 15px;
+}
