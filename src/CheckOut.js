@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Panel, Button} from 'react-bootstrap';
 import {connect} from 'react-redux';
+import './CheckOut.css'
 
 function mapStateToProps(state) {
     return {
@@ -20,11 +21,11 @@ class CheckOut extends Component {
 
 
         return (
-            <div>
+            <div className="checkout">
                 <Panel>
-                    <Panel.Heading>Total: {this.props.count}</Panel.Heading>                   
+                    <Panel.Heading>Ваш рахунок</Panel.Heading>                   
                     <Panel.Body>{itemlist}</Panel.Body>
-                    <Panel.Footer><Button>Pay</Button></Panel.Footer>
+                    <Panel.Footer className="clearfix"><Button className="pull-right">Заплатити грошенят</Button></Panel.Footer>
                 </Panel>
             </div>
         );

@@ -47,7 +47,7 @@ class ShopItem extends Component {
                                 // onChange={this.handleChange}
                             />
                             <Button onClick={this.doIncrement}>+</Button>
-                            <Button className="buybutton" bsStyle="success" onClick={this.doBuy}>Buy</Button>
+                            <Button className="buybutton" bsStyle="success" onClick={this.doBuy}>Хочу</Button>
                         </FormGroup>
                     </Form>
                 </Panel.Footer>
