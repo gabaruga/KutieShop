@@ -23,9 +23,9 @@ function reducer(state=init, action) {
             return {...state,
                     count: state.count+action.value};
         case "ADD_CHECKOUT":
-            console.info(state);
+            console.info("State update: "+action.value+" - "+action.aq);
             return {...state,
-                items_check: [...state.items_check, action.value]};
+                items_check: [...state.items_check, [action.value, action.aq]]};
         default:
             return state;
     }

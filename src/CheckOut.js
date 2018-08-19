@@ -15,7 +15,7 @@ class CheckOut extends Component {
         var itemlist = [];
         for (var i=0; i<this.props.items_check.length; i++) {
             console.info("Item to list: "+this.props.items_check[i]);
-            itemlist.push(<div key={i}>{this.props.items_check[i]}</div>);
+            itemlist.push(<div key={i}>{this.props.items_check[i][0]} : {this.props.items_check[i][1]}</div>);
         }
 
 

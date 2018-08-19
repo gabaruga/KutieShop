@@ -25,8 +25,8 @@ class ShopItem extends Component {
 
     doBuy = () => {
         this.props.dispatch({type: "UPDATE_CHECK", value: this.state.quantity});
-        console.info("Add checkout dispatch with: "+this.props.title);
-        this.props.dispatch({type: "ADD_CHECKOUT", value: this.props.title});
+        console.info("Add checkout dispatch with: "+this.props.title+" - "+this.state.quantity);
+        this.props.dispatch({type: "ADD_CHECKOUT", value: this.props.title, aq: this.state.quantity});
     }
 
     render () {
