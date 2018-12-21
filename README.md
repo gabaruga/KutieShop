@@ -1,1 +1,1 @@
-This a project for learning React/Redux/Router combo with some Bootstrap stuff.
+This is a project for learning React/Redux/Router combo with some Bootstrap stuff.
